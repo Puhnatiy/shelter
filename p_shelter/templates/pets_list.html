@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h2>Наши питомцы</h2>
+<h3>Попугаи</h3>
+	  <div class="row">
+	  {% for pet in pets_parrot %}
+<div class="col-md-auto">	  
+	  <div class="card" style="width: 18rem;">
+  <a href="/pets/{{pet.pk}}"><img src="{{ pet.photo.url }}" class="card-img-top" ></a>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+<h3>Кошки</h3>
+	  <div class="row">
+	  {% for pet in pets_cat %}
+<div class="col-md-auto">	  
+	  <div class="card" style="width: 18rem;">
+  <a href="/pets/{{pet.pk}}"><img src="{{ pet.photo.url }}" class="card-img-top" ></a>
+
+</div>
+</div>
+{% endfor %}
+</div>
+<h3>Собаки</h3>
+	  <div class="row">
+	  {% for pet in pets_dog %}
+<div class="col-md-auto">	  
+	  <div class="card" style="width: 18rem;">
+  <a href="/pets/{{pet.pk}}"><img src="{{ pet.photo.url }}" class="card-img-top" ></a>
+ 
+</div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}
+
+

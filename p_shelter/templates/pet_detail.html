@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    
+    {% load static %}
+	<h1>{{object.name}}</h1>
+   
+        <a href="#">
+            <img width="400"
+                 src="{{ object.photo.url }}" alt="" class="fit">
+        </a>
+   
+    
+        <ul>
+            <li>Вид: {{object.kind}}</li>
+            <li>Порода: {{object.breed}}</li>
+			<li>Описание: {{object.description}}</li>
+        </ul>
+    
+
+{% endblock %}
