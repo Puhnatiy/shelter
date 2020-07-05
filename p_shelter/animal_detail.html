@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card" style="width: 50vw;align-self:center">
+    <div class="card-header">
+        <h1>Добро пожаловать в {{ title }}!</h1>
+    </div>
+    {% load static %}
+    <div class="col-lg-4">
+        <a href="#">
+            <img height="400" width="400"
+                 src="{{ object.photo.url }}" alt="" class="fit">
+        </a>
+    </div>
+    <div class="pet-bio-text">
+        <ul>
+            <li>Кличка: {{object.name}}</li>
+            <li>Порода: {{object.breed}}</li>
+        </ul>
+    </div>
+  </div>
+{% endblock %}
